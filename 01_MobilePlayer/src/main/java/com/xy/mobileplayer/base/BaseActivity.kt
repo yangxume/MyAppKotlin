@@ -31,7 +31,7 @@ abstract class BaseActivity : AppCompatActivity(),AnkoLogger {
 
     }
 
-    protected fun initData() {
+    open protected fun initData() {
 
 
     }
