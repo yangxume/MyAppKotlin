@@ -23,6 +23,19 @@ allprojects {
         maven {
             url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
         }
+        maven {
+            url "http://10.60.0.100:8081/repository/okayclient_snapshot/"
+        }
+        maven {
+            url "http://10.60.0.100:8081/repository/okayclient/"
+        }
+        maven {
+            url "http://10.60.0.100:8081/repository/okayrom/"
+        }
+        maven {
+            url "http://10.60.0.100:8081/repository/okayrom_snapshot/"
+        }
+
         google()
         jcenter()
     }
