@@ -1,10 +1,11 @@
-package com.xy.myappkotlin;
+package com.xy.myappkotlin.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import com.okay.t_x5webview.X5WebView;
+import com.xy.myappkotlin.R;
 
 public class TestActivity extends AppCompatActivity {
 

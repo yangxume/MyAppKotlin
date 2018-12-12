@@ -4,7 +4,7 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             tools:context=".MainActivity">
+                                             tools:context=".activity.MainActivity">
 
     <com.okay.t_x5webview.X5WebView
             android:id="@+id/x5webview"
