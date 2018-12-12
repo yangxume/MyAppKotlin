@@ -2,7 +2,7 @@ package com.xy.myappkotlin
 
 import org.junit.Test
 
-class Kotlin01Test{
+class KotlinTest01_基础语法{
 
     @Test
     fun helloWorld(){
@@ -29,7 +29,7 @@ class Kotlin01Test{
     }
 
     @Test
-    fun TestSum(){
+    fun testSum(){
 
         val sum1 = sum1(3, 2)
         println("sum = "+sum1)
@@ -59,6 +59,59 @@ class Kotlin01Test{
         print(sumLambda(1,3))
 
     }
+
+    @Test
+    fun testVar(){
+
+        //定义常量和变量
+        var a:Int = 1
+        val b:Int = 13
+        val c = 9
+
+        println(a)
+        println(b)
+        println(c)
+
+    }
+
+    @Test
+    fun testStr(){
+
+        var a = 1;
+        var s1 = "s is $a"
+
+        println("s1 = "+s1)
+
+        var s2 = s1.replace("is","was")
+
+        println("s2 = "+s2)
+
+        a = 2
+        var s3 = "${s1.replace("is","was")},but now is $a"
+
+        println("s3 = "+s3)
+
+
+
+
+
+    }
+
+    @Test
+    fun testNullCheck(){
+
+        var strNull : String = ""
+        println(strNull)
+
+
+        var str1:String? = "str can is null"
+        println(str1);
+
+
+
+    }
+
+
 
 }
 
