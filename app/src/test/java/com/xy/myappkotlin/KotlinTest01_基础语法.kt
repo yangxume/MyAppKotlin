@@ -91,25 +91,70 @@ class KotlinTest01_基础语法{
 
         println("s3 = "+s3)
 
-
-
-
-
     }
 
+    /**
+     * NULL检查机制
+       Kotlin的空安全设计对于声明可为空的参数，在使用时要进行空判断处理，
+       有两种处理方式，
+              1.字段后加!!像Java一样抛出空异常，
+              2.字段后加?可不做处理返回值为 null或配合?:做空判断处理
+     */
     @Test
     fun testNullCheck(){
 
-        var strNull : String = ""
-        println(strNull)
+//        var age : String = "23"
+        var age : String = "中国"
+        println("age = "+age)
 
+        //变量后面加？表示可为空
+        var age2 : Int = age?.toInt()
+        println("age2 = "+age2)
 
-        var str1:String? = "str can is null"
-        println(str1);
+        //变量后面加!!表示为空时跑出空指针异常
+        var age1 : Int = age!!.toInt()
+        println("age1 = "+age1)
+
+        //为空时返回-1
+        var age3 : Int = age?.toInt()?:-1
+        println("age3 = "+age3)
+    }
+
+    /**
+     *  当一个引用可能为 null 值时, 对应的类型声明必须明确地标记为可为 null。
+         当 str 中的字符串内容不是一个整数时, 返回 null:
+     */
+    fun parseInt(str : String):Int?{
+        return str.toInt()
+    }
+
+    @Test
+    fun testParseInt(){
+//        val value = parseInt("kotlin")
+        val value = parseInt("365")
+        println("value = "+value)
+    }
+
+    fun funNull(args : Array<String>){
+        if (args.size < 2){
+            println("args size must =2")
+            return
+        }
+        val x = parseInt(args[0])
+        val y = parseInt(args[1])
+
+        if (x != null && y!= null){
+            print("x+y = "+x+y)
+        }
+    }
+
+    @Test
+    fun testNull2(){
 
 
 
     }
+
 
 
 
