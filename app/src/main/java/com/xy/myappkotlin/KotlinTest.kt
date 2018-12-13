@@ -7,15 +7,10 @@ fun main(args : Array<String>){
 
 class KotlinTest{
 
-
     init {
         println("fun init")
     }
-
     fun test(){
-
         println("fun test")
-
     }
-
 }
