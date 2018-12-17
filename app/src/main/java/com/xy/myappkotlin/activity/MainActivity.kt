@@ -9,8 +9,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
-
-
     private lateinit var btn_01 : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,18 +46,13 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         val id: Int = v!!.id
 
         test1()
-
-
     }
 
     private fun test1() {
 
-
-
-
     }
 
     private fun sum(a: Int,b:Int):Int{
-        return a+b;
+        return a+b
     }
 }

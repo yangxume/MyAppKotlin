@@ -6,8 +6,8 @@
                                              android:layout_height="match_parent"
                                              tools:context=".activity.MainActivity">
 
-    <com.okay.t_x5webview.X5WebView
-            android:id="@+id/x5webview"
+    <WebView
+            android:id="@+id/webview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
