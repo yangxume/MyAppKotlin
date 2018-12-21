@@ -13,6 +13,10 @@ fun main(args : Array<String>){
     val test4Result = Kotlin03().test4("123")
     println(test4Result)
 
+    //调用包级别的方法
+    pkgFun()
+
+
 }
 
 class Kotlin03{
@@ -36,6 +40,23 @@ class Kotlin03{
         println("kotlin 方法之有参有返回值")
         return parms.toInt()
     }
+
+    fun testPkgFun(){
+        //静态方式调用包级别的方法
+        pkgFun()
+    }
+
+}
+
+/**
+ * 静态方法
+ * Kotlin中没有Java中的静态方法。但是有三种实现的方式：
+ * 1. 使用包级别的函数，即源文件中包含函数:
+ *
+ */
+fun pkgFun(){
+
+    println("i am is a fun of package")
 
 }
 
