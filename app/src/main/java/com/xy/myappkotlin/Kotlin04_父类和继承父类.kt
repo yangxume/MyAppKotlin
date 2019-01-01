@@ -3,7 +3,8 @@ package com.xy.myappkotlin
 fun main(args : Array<String>){
 
     var instance: BaseTest<String>
-    instance = Test<String>("本类是")
+    instance = Kotlin4Test<String>("本类是")
+    
     //父类对象调用子类对象的方法
     instance.test()
 
@@ -32,7 +33,7 @@ open class BaseTest<T>( open val t: T) {
  *  覆盖属性t
  *  复写test（）
  */
-class Test<T> constructor(override var t: T) : BaseTest<T>(t) {
+class Kotlin4Test<T> constructor(override var t: T) : BaseTest<T>(t) {
     /**
      * 复写父类中的方法
      */
