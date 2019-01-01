@@ -4,7 +4,7 @@ fun main(args : Array<String>){
 
     var instance: BaseTest<String>
     instance = Kotlin4Test<String>("本类是")
-    
+
     //父类对象调用子类对象的方法
     instance.test()
 
