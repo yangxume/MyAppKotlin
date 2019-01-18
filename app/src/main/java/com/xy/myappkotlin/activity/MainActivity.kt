@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         initView()
 
         // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+//        sample_text.text = stringFromJNI()
     }
 
     private fun initView() {

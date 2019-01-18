@@ -1,4 +1,4 @@
-package com.xy.mobileplayer
+package kotlin.xy.recyclerview
 
 import org.junit.Test
 
