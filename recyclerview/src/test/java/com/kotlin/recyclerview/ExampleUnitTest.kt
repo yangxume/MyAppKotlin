@@ -1,4 +1,4 @@
-package kotlin.xy.recyclerview
+package com.kotlin.recyclerview
 
 import org.junit.Test
 
