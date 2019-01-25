@@ -1,4 +1,4 @@
-package com.kotlin.retrofit
+package com.kotlin.retrofit.bean
 
 class MyCarBean(var data: List<CarInfo>) {
     class CarInfo(

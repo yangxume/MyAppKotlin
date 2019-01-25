@@ -2,6 +2,7 @@ package com.kotlin.retrofit
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.retrofit.bean.MyCarBean
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

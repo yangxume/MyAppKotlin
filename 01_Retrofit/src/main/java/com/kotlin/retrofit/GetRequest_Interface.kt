@@ -1,5 +1,6 @@
 package com.kotlin.retrofit
 
+import com.kotlin.retrofit.bean.MyCarBean
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
