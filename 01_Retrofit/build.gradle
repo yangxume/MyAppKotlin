@@ -49,6 +49,9 @@ dependencies {
     }
     //robole
     testImplementation 'org.robolectric:robolectric:3.8'
+    testImplementation group: 'org.robolectric', name: 'android-all', version: '4.1.2_r1-robolectric-r1'
+
+
     //butterknife
     implementation 'com.jakewharton:butterknife:8.1.0'
     //LoadingDialog

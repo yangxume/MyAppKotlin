@@ -1,5 +1,6 @@
 package com.kotlin.retrofit.net
 
+import com.uniwill.dell.mengxi.net.ApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

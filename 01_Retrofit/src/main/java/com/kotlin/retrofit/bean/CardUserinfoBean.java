@@ -3,20 +3,44 @@ package com.kotlin.retrofit.bean;
 import java.util.List;
 
 /**
- * Created by dell on 2018/6/21.
+ * Copyright
+ * <p>
+ * Created by xuyang on 2019/1/26 14:31
+ * <p>
+ * email xuyangme@126.com
+ * <p>
+ * ${FILENAME}
+ * <p>
+ * Description
+ * <p>
+ * Update records:
  */
-public class UserInfoBean {
+public class CardUserinfoBean {
 
 
     /**
+     * card_num : 0001
      * code : 10000
-     * user : [{"id":2,"username":"admin","password":"43442676c74ae59f219c2d87fd6bad52","sex":"男","department":"保安部","userType":"app","job":"保安","realname":"admin","phone":"13366851236","createdAt":"2019-01-02 15:16:00","updatedAt":"2019-01-26 12:58:00","cardId":1}]
-     * errorMsg : 用户信息获取成功
+     * money : 100
+     * user : [{"id":2,"username":"admin","password":"43442676c74ae59f219c2d87fd6bad52","sex":"男","department":"保安部","userType":"app","job":"保安","realname":"admin","phone":"13366851236","createdAt":"2019-01-02 15:16:00","updatedAt":"2019-01-04 10:31:00","cardId":1}]
+     * errorMsg : 用户信息
+     * recharge_num : 2
      */
 
+    private String card_num;
     private int code;
+    private int money;
     private String errorMsg;
+    private int recharge_num;
     private List<UserBean> user;
+
+    public String getCard_num() {
+        return card_num;
+    }
+
+    public void setCard_num(String card_num) {
+        this.card_num = card_num;
+    }
 
     public int getCode() {
         return code;
@@ -26,12 +50,28 @@ public class UserInfoBean {
         this.code = code;
     }
 
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
     public String getErrorMsg() {
         return errorMsg;
     }
 
     public void setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
+    }
+
+    public int getRecharge_num() {
+        return recharge_num;
+    }
+
+    public void setRecharge_num(int recharge_num) {
+        this.recharge_num = recharge_num;
     }
 
     public List<UserBean> getUser() {
@@ -54,7 +94,7 @@ public class UserInfoBean {
          * realname : admin
          * phone : 13366851236
          * createdAt : 2019-01-02 15:16:00
-         * updatedAt : 2019-01-26 12:58:00
+         * updatedAt : 2019-01-04 10:31:00
          * cardId : 1
          */
 
