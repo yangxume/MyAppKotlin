@@ -15,48 +15,119 @@ package com.xy.myappkotlin
  */
 fun main(args : Array<String>){
 
-    val kotlin05Test = Kotlin05Test()
+//    val myClass1 = MyClass1()
+//    println(myClass1.abstraceProperty)
+//    println(myClass1.propertyImpl)
+//    myClass1.abstractFun()
+//    myClass1.interfaceFun()
 
-    val property = kotlin05Test.property
+    val sonClass = SonClass("本类是：")
+    sonClass.test()
+}
 
-    val propertyImpl = kotlin05Test.propertyImpl
 
-    println(property)
+class MyClass1 : kotlinInterface1{
 
-    println(propertyImpl)
+    //接口中定义的属性必须在实现类中初始化
+    override val abstraceProperty: String
+        get() = "实现类：接口中抽象属性在实现类中实现"
 
-    kotlin05Test.test()
+    override fun abstractFun() {
+        println("实现类：接口中的抽象方法实现")
+    }
+}
 
-    kotlin05Test.test1()
+interface kotlinInterface1{
 
+    //抽象属性
+    val abstraceProperty : String
+
+    val propertyImpl : String get() = "接口：接口中抽象属性的实现用get()"
+
+    fun interfaceFun(){
+        println("接口：我是接口中定义的方法")
+    }
+
+    fun abstractFun()
 
 }
 
-class Kotlin05Test : TestInterface{
 
-    override val property: String
-        get() = "实现类初始化接口中的属性"
+interface interface1Child{
 
-    override fun test1() {
-        println("实现类重写接口方法")
+    val childProperty : String
+    fun playing()
+    fun crying()
+
+}
+
+interface interfaceStudent{
+
+    val studentProperty : String
+    fun reading()
+    fun writing()
+
+}
+/**
+ * 1/定义接口关键字：interface
+ * 2/接口中有两种方法（抽象方法和方法的实现），有两种属性（抽象属性和属性访问器的实现）,这与Java有很大的不同。
+ * 3/实现接口，在类头后面添加:接口名
+ * 4/一个类可以实现一个或多个接口
+ * 5/接口中只有val修饰的只读属性，没有var修饰的可写属性
+ * 6/实现接口，必需重写抽象属性和抽象方法，且用override修饰。
+ * 7/接口的方法和属性默认open修饰的
+ * 8/实现接口，在类头后面添加:接口名，而继承父类是:父类名()
+ * 9/接口的方法的默认open修饰的
+ *10/当父类和接口或者多个接口中中有同名方法时候，调用应该使用super<类名>.同名方法的形式调用
+ */
+class Person : interface1Child,interfaceStudent{
+
+    override val childProperty: String
+        get() = "7岁以下幼儿，爱哭"
+    override val studentProperty: String
+        get() = "7岁后上学了"
+
+    override fun playing() {
+    }
+
+    override fun crying() {
+    }
+
+    override fun reading() {
+    }
+
+    override fun writing() {
+    }
+}
+
+//接口和父类存在同名方法
+open class FatherClass<T>(open val t:T){
+
+    open fun test(){
+        println("我是父类中的test()")
+    }
+
+    fun closeTest(){
+        println("父类中不能被子类重写的方法")
     }
 
 }
 
-
-interface TestInterface{
-
-
-    val property : String
-
-    val propertyImpl : String get()  = "这是接口内部已经赋值的属性"
-
+interface Interface2{
+    //接口的成员变量默认是 open 的
     fun test(){
+        println("我是接口中的test()")
+    }
+}
 
-        println("这是接口中的方法test()")
+class SonClass<T> constructor(override var t:T) : FatherClass<T>(t),Interface2{
+
+    override fun test() {
+
+        println("${t} FatherClass 子类")
+        super<Interface2>.test()
+        super<FatherClass>.test()
 
     }
-
-    fun test1()
 
 }
