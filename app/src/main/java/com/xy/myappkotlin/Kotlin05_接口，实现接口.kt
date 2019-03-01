@@ -100,7 +100,6 @@ class Person : interface1Child,interfaceStudent{
     }
 }
 
-//接口和父类存在同名方法
 open class FatherClass<T>(open val t:T){
 
     open fun test(){
@@ -120,6 +119,7 @@ interface Interface2{
     }
 }
 
+//当父类和接口或者多个接口中中有同名方法时候，调用应该使用super<类名>.同名方法的形式调用。
 class SonClass<T> constructor(override var t:T) : FatherClass<T>(t),Interface2{
 
     override fun test() {
