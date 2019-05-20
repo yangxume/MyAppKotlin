@@ -1,4 +1,4 @@
-package com.xy.myappkotlin
+package com.xy.myappkotlin.study1_csdn
 
 /**
  *Copyright
@@ -26,7 +26,7 @@ fun main(args : Array<String>){
 }
 
 
-class MyClass1 : kotlinInterface1{
+class MyClass1 : kotlinInterface1 {
 
     //接口中定义的属性必须在实现类中初始化
     override val abstraceProperty: String
@@ -80,7 +80,7 @@ interface interfaceStudent{
  * 9/接口的方法的默认open修饰的
  *10/当父类和接口或者多个接口中中有同名方法时候，调用应该使用super<类名>.同名方法的形式调用
  */
-class Person : interface1Child,interfaceStudent{
+class Person : interface1Child, interfaceStudent {
 
     override val childProperty: String
         get() = "7岁以下幼儿，爱哭"
@@ -120,7 +120,8 @@ interface Interface2{
 }
 
 //当父类和接口或者多个接口中中有同名方法时候，调用应该使用super<类名>.同名方法的形式调用。
-class SonClass<T> constructor(override var t:T) : FatherClass<T>(t),Interface2{
+class SonClass<T> constructor(override var t:T) : FatherClass<T>(t),
+    Interface2 {
 
     override fun test() {
 

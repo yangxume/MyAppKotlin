@@ -1,5 +1,6 @@
 package com.xy.myappkotlin
 
+import com.xy.myappkotlin.study1_csdn.BaseTest
 import org.junit.Test
 
 //包修饰符

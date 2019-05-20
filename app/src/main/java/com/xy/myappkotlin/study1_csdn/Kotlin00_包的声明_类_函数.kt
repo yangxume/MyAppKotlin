@@ -1,4 +1,4 @@
-package com.xy.myappkotlin
+package com.xy.myappkotlin.study1_csdn
 
 //这个的main（）是属于包级别的函数
 fun main(args: Array<String>){

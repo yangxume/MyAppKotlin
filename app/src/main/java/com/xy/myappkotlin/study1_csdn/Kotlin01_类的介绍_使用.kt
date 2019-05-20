@@ -1,4 +1,4 @@
-package com.xy.myappkotlin
+package com.xy.myappkotlin.study1_csdn
 
 
 /**
@@ -8,9 +8,9 @@ fun main(args : Array<String>){
 
     Kotlin02<String>("Kotlin-类的介绍和使用").test()
 
-    Kotlin02<String>("Kotlin1","Kotlin2")
+    Kotlin02<String>("Kotlin1", "Kotlin2")
 
-    Kotlin02<Int>(1,2,3)
+    Kotlin02<Int>(1, 2, 3)
 
 }
 

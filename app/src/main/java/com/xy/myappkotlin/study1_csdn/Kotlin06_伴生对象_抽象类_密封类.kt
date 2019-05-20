@@ -1,4 +1,4 @@
-package com.xy.myappkotlin
+package com.xy.myappkotlin.study1_csdn
 
 fun main(args : Array<String>){
 
@@ -96,7 +96,7 @@ sealed class BaseClass{
     }
 }
 
-fun testSealed(instanse:BaseClass)= when(instanse){
+fun testSealed(instanse: BaseClass)= when(instanse){
 
     is BaseClass.Test1 -> instanse.test()
 

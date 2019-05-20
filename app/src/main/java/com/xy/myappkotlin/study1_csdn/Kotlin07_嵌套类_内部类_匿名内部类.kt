@@ -1,4 +1,4 @@
-package com.xy.myappkotlin
+package com.xy.myappkotlin.study1_csdn
 
 fun main(args : Array<String>){
 
@@ -13,7 +13,7 @@ fun main(args : Array<String>){
     inner.funInner()
 
     println("----------匿名内部类----------")
-    outterClass.setTestInterface(object : TestInterface{
+    outterClass.setTestInterface(object : TestInterface {
 
         override fun funInterface() {
             println("对象表达式创建匿名内部类的实例")
