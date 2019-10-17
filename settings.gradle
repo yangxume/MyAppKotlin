@@ -1,1 +1,1 @@
-include ':app', ':recyclerview', ':recyclerview', ':01_Retrofit', ':kotlin_itcast'
+include ':app', ':recyclerview', ':01_Retrofit'
